@@ -1,19 +1,24 @@
 .LaunchDetail {
     height: 100vh;
     max-height: 100%;
-    width: calc(100vw - 300px);
+    width: calc(100vw - 25vw);
     overflow: hidden auto;
-    padding-left: 20px;
-    padding-right: 20px;
 }
 
 .LaunchDetail__status {
-    margin-top: 40px;
+    margin-top: 4vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
 }
 
 .LaunchDetail__title {
-    margin-top: 0;
-    margin-bottom: 4px;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.LaunchDetail__description {
+    padding-left: 1vw;
+    padding-right: 1vw;
 }
 
 .LaunchDetail__success {
@@ -26,10 +31,11 @@
 
 .LaunchDetail__image-list {
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 1vw;
     grid-template-columns: repeat(2, 1fr);
-    margin-top: 40px;
-    padding-bottom: 100px;
+    padding-bottom: 2vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
 }
 
 .LaunchDetail__image {

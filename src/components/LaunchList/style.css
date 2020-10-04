@@ -2,9 +2,9 @@
     height: 100vh;
     overflow: hidden auto;
     background-color: #ececec;
-    width: 300px;
-    padding-left: 20px;
-    padding-right: 20px;
+    width: 23vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
 }
 
 .LaunchList__list {
@@ -14,8 +14,8 @@
 }
 
 .LaunchList__item {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
     border-top: 1px solid #919191;
     cursor: pointer;
 }

@@ -1,15 +1,14 @@
 import React from 'react';
-import LaunchList from './components/LaunchList';
-import LaunchDetail from './components/LaunchDetail';
-
-import './App.css';
+import MainBody from './components/MainBody';
+import Grid from '@material-ui/core/Grid';
 
 const App = () => {
     return (
-        <div className="App">
-            <LaunchList />
-            <LaunchDetail />
-        </div>
+        <Grid container spacing={0} xs={12}>
+            <Grid item xs={12}>
+                <MainBody />
+            </Grid>
+        </Grid>
     );
 };
 
