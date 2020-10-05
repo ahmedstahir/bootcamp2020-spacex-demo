@@ -1,8 +1,8 @@
 .LaunchDetail {
-    height: 100vh;
-    max-height: 100%;
+    height: 89vh;
     width: calc(100vw - 25vw);
     overflow: hidden auto;
+    background-color: greenyellow;
 }
 
 .LaunchDetail__status {

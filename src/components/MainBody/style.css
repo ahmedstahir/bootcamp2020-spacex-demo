@@ -1,6 +1,8 @@
 .MainBody {
     display: flex;
     width: 100vw;
-    height: 100vh;
+    height: 89vh;
+    background-color: #000000;
     overflow: hidden;
+    padding-top: 1vh;
 }

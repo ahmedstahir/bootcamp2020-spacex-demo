@@ -10,7 +10,7 @@ const className = 'LaunchList';
 
 const LaunchList: React.FC<Props> = ({ data }) => (
     <div className={className}>
-        <h3>Launches</h3>
+        <div className={`${className}__title`}>ALL LAUNCHES</div>
         <ol className={`${className}__list`}>
             {!!data.launches &&
                 data.launches.map(
