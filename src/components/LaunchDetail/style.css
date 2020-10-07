@@ -2,7 +2,8 @@
     height: 89vh;
     width: calc(100vw - 25vw);
     overflow: hidden auto;
-    background-color: greenyellow;
+    background-color: black;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .LaunchDetail__status {
@@ -14,11 +15,28 @@
 .LaunchDetail__title {
     padding-left: 1vw;
     padding-right: 1vw;
+    margin-bottom: 0;
+}
+
+.LaunchDetail__date {
+    padding-left: 1vw;
+    margin-top: 0;
+}
+
+.LaunchDetail__video-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.LaunchDetail__video {
+    width: 20vw;
 }
 
 .LaunchDetail__description {
     padding-left: 1vw;
     padding-right: 1vw;
+    font-family: 'Roboto', sans-serif;
 }
 
 .LaunchDetail__success {
@@ -40,4 +58,22 @@
 
 .LaunchDetail__image {
     width: 100%;
+}
+
+.LaunchDetail__status-succeeded {
+    font-family: cursive;
+    color: #0f0;
+    text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 30px #00e600, 0 0 40px #00e600, 0 0 50px #00e600, 0 0 60px #00e600, 0 0 70px #00e600;
+}
+
+.LaunchDetail__status-failed {
+    font-family: cursive;
+    color: #f00;
+    text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 30px #e60000, 0 0 40px #e60000, 0 0 50px #e60000, 0 0 60px #e60000, 0 0 70px #e60000;
+}
+
+.LaunchDetail__status-tbl {
+    font-family: cursive;
+    color: rgba(255, 255, 255, 0.7);
+    text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 30px #e6e6e6, 0 0 40px #e6e6e6, 0 0 50px #e6e6e6, 0 0 60px #e6e6e6, 0 0 70px #e6e6e6;
 }

@@ -23,6 +23,11 @@
     font-size: 0.9em;
 }
 
+.LaunchList__status {
+    vertical-align: text-bottom;
+    padding-left: 0.5vw;
+}
+
 .LaunchList__title {
     padding-top: 2vh;
     padding-bottom: 2vh;

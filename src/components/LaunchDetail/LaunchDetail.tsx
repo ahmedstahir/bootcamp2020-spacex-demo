@@ -1,6 +1,8 @@
 import React from 'react';
 import { LaunchDetailQuery } from '../../generated/graphql';
 import './style.css';
+import { format } from 'date-fns';
+import ReactPlayer from 'react-player/lazy'
 
 interface Props {
     data: LaunchDetailQuery;
@@ -16,19 +18,37 @@ const LaunchDetail: React.FC<Props> = ({ data }) => {
     return (
         <div className={className}>
             <div className={`${className}__status`}>
-                <span>Flight {data.launch.flight_number}: </span>
-                {data.launch.launch_success ? (
-                    <span className={`${className}__success`}>Success</span>
-                ) : (
-                        <span className={`${className}__failed`}>Failed</span>
-                    )}
+                {data.launch.launch_success === null
+                    ? <span className="LaunchDetail__status-tbl">Mission # {data.launch.flight_number} is yet to launch </span>
+                    : data.launch.launch_success
+                        ? <span className={`${className}__status-succeeded`}>Mission # {data.launch.flight_number} succeeded </span>
+                        : <span className={`${className}__status-failed`}>Mission # {data.launch.flight_number} failed </span>
+                }
             </div>
             <h1 className={`${className}__title`}>
                 {data.launch.mission_name}
                 {data.launch.rocket &&
                     ` (${data.launch.rocket.rocket_name} | ${data.launch.rocket.rocket_type})`}
             </h1>
-            <p className={`${className}__description`}>{data.launch.details}</p>
+            <p className={`${className}__date`}>
+                {!!data.launch.launch_date_utc
+                    ? <span>{format(new Date(data.launch.launch_date_utc), 'PPPPp')}</span>
+                    : null
+                }
+            </p>
+            <p className={`${className}__description`}>
+                {!!data.launch.details
+                    ? data.launch.details
+                    : <span>-= No description available for this mission =-</span>
+                }
+            </p>
+            <div className={`${className}__video-container`}>
+                <ReactPlayer
+                    className={`${className}__video`}
+                    url={String(data.launch.links?.video_link)}
+                    controls={true}
+                />
+            </div>
             {!!data.launch.links && !!data.launch.links.flickr_images && (
                 <div className={`${className}__image-list`}>
                     {data.launch.links.flickr_images.map(image =>
