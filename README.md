@@ -7,6 +7,7 @@ Salient features of the application are:
 - Material-UI with theming
 - `date-fns` library for manipulating and formatting dates
 - State management using `useState` hook
+- Used [`ReactPlayer`](https://github.com/CookPete/react-player) to play launch videos
 
 This SpaceX client application is available on *Netlify* [at this link](https://launches-space-x.netlify.app/)
 
