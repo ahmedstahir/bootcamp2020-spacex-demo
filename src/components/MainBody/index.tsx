@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import './style.css';
 
 const MainBody: React.FC = () => {
-    const [launchId, setLaunchId] = useState(42);
+    const [launchId, setLaunchId] = useState(1);
     const handleIdChange = useCallback(newId => {
         setLaunchId(newId);
     }, []);
